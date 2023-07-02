@@ -1,10 +1,11 @@
 import React from 'react'
 
-const AddItem = () => {
+const AddItem = ({ createTask }) => {
+  let title = 'TEST'
   return (
     <form className="item-add-form d-flex">
       <input type="text" className="form-control" placeholder="What needs to be done" /><button
-        className="btn btn-outline-secondary col-3">Add Item</button>
+        className="btn btn-outline-secondary col-3" onClick={() => createTask(title)} >Add Item</button>
     </form>
   )
 }
